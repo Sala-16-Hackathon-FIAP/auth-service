@@ -1,0 +1,54 @@
+common: &default_settings
+  license_key: '${NEW_RELIC_LICENSE_KEY:59400ec9720dcd630590cfa313f9afa49301NRAL}'
+  app_name: fiapx-auth-service
+  log_level: info
+  log_file_name: newrelic_agent.log
+
+  distributed_tracing:
+    enabled: true
+
+  span_events:
+    enabled: true
+    max_samples_stored: 2000
+
+  application_logging:
+    enabled: true
+    forwarding:
+      enabled: true
+      max_samples_stored: 10000
+    local_decorating:
+      enabled: false
+    metrics:
+      enabled: true
+
+  transaction_tracer:
+    enabled: true
+    transaction_threshold: apdex_f
+    record_sql: obfuscated
+    explain_enabled: true
+    explain_threshold: 500
+
+  error_collector:
+    enabled: true
+    ignore_status_codes: 404
+
+  custom_insights_events:
+    enabled: true
+    max_samples_stored: 30000
+
+  thread_profiler:
+    enabled: true
+
+  jmx:
+    enabled: true
+
+development:
+  <<: *default_settings
+  app_name: fiapx-auth-service (Development)
+
+test:
+  <<: *default_settings
+  app_name: fiapx-auth-service (Test)
+
+production:
+  <<: *default_settings
