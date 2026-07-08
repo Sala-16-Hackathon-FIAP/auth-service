@@ -255,3 +255,9 @@ Manifests in `k8s/`:
 - `service.yaml` — ClusterIP on port 8080
 
 Kubernetes secrets are automatically created by the pipeline from GitHub Secrets.
+
+---
+
+## Acknowledgments
+
+This project was developed with the assistance of [Claude](https://claude.com/claude-code) (Anthropic) as an AI pair-programming tool for code implementation, debugging, and documentation.
