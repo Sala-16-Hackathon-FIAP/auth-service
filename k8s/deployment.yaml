@@ -45,6 +45,7 @@ spec:
                 secretKeyRef:
                   name: auth-service-secrets
                   key: new-relic-license-key
+                  optional: true
           livenessProbe:
             httpGet:
               path: /actuator/health
