@@ -41,7 +41,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mvn -B sonar:sonar \
-            -Dsonar.projectKey=fiapx_auth-service \
+            -Dsonar.projectKey=Sala-16-Hackathon-FIAP_auth-service \
             -Dsonar.organization=sala-16-hackathon-fiap \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
