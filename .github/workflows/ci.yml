@@ -76,7 +76,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/fiapx-auth-service
+          images: ghcr.io/sala-16-hackathon-fiap/fiapx-auth-service
           tags: |
             type=sha
             type=raw,value=latest
@@ -121,7 +121,7 @@ jobs:
 
       - name: Deploy to EKS
         run: |
-          IMAGE="ghcr.io/${{ github.repository_owner }}/fiapx-auth-service:latest"
+          IMAGE="ghcr.io/sala-16-hackathon-fiap/fiapx-auth-service:latest"
           sed -i "s|AUTH_SERVICE_IMAGE|$IMAGE|g" k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
           kubectl apply -f k8s/deployment.yaml
