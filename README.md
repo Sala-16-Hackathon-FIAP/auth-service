@@ -2,6 +2,10 @@
 
 Authentication service for the FIAP-X video processing platform. Handles user registration, login, and JWT token generation/validation.
 
+![FIAP-X platform architecture](docs/architecture.png)
+
+> High-level architecture of the FIAP-X platform — microservices, choreographed saga over RabbitMQ, database-per-service (RDS), object storage (S3), running on EKS and provisioned with Terraform.
+
 ---
 
 ## Tech Stack
